@@ -44,5 +44,5 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with: 
-          name: assets-for-download
+          name: ExamplePostAppExecutable
           path: D:\a\ExamplePostApp\ExamplePostApp\bin\Release\ExamplePostApp.exe
