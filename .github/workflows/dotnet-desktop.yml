@@ -40,3 +40,9 @@ jobs:
       
       - name: Build solution
         run: msbuild ExamplePostApp.sln -t:rebuild -property:Configuration=Release
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2
+        with: 
+          name: assets-for-download
+          path: downloads
