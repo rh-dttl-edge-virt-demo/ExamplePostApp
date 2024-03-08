@@ -18,6 +18,9 @@ jobs:
 
   build:
 
+    permissions:
+      contents: write
+
     strategy:
       matrix:
         configuration: [Release]
@@ -48,9 +51,10 @@ jobs:
         with: 
           name: ExamplePostAppExecutable
           path: D:\a\ExamplePostApp\ExamplePostApp\bin\Release\ExamplePostApp.exe
+        if: ${{ ! startsWith(github.ref, 'refs/tags/v') }}
 
       - name: Create release
         uses: softprops/action-gh-release@v1
         with:
-          files: D:\a\ExamplePostApp\ExamplePostApp\bin\Release\ExamplePostApp.exe
+          files: D:/a/ExamplePostApp/ExamplePostApp/bin/Release/ExamplePostApp.exe
         if: ${{ startsWith(github.ref, 'refs/tags/v') }}
