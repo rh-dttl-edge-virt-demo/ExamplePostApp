@@ -45,7 +45,7 @@ namespace fakeACSFramework
             mySerialPort.DataBits = 8;
             mySerialPort.Handshake = Handshake.None;
 
-            lblAppBanner2.Text = "Connected to POST database: " + Environment.GetEnvironmentVariable("POST_CD");
+            lblAppBanner2.Text = "New update is connected to POST database: " + Environment.GetEnvironmentVariable("POST_CD");
         }
                
                 
